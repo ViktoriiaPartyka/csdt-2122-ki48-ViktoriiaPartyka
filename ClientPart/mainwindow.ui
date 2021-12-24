@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1040</width>
+    <height>585</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Train tickets</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="recources.qrc">
+    <normaloff>:/recources/img/programicon.png</normaloff>:/recources/img/programicon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>64</width>
+    <height>64</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#1e282d;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="LoginMenu">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/*--------------------------------Backdround color--------------------------------*/
+#LoginMenu{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(23, 30, 34, 255), stop:0.5 rgba(30, 40, 45, 255), stop:1 rgba(23, 30, 34, 255));
+}
+/*--------------------------------Button--------------------------------*/
+
+QPushButton{
+	
+	background-color: rgba(242, 150, 47, 220);
+	
+	border:none;
+	border-radius:10px;
+
+	color:#1b2327;
+	font-family:  &quot;Calibri Bold&quot;;
+	font-size: 17px;
+
+}
+
+QPushButton:hover:!pressed{
+	background-color: #455A64;
+color:#EEEEEE;
+
+}
+
+QPushButton:hover:pressed{
+	background-color: #37474F;
+color:#DDDDDD;
+}
+
+
+/*--------------------------------Check box--------------------------------*/
+QCheckBox {
+	color:#999999;
+	font: italic 9pt &quot;Open Sans Light&quot;;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:checked {
+    background: #198C49;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:unchecked {
+    background:#990329;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:checked:hover {
+  	border: 2px solid #198C49;
+    background: #15733C;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:unchecked:hover {
+	border: 2px solid #990329;
+	background:#800322;
+	border-radius:6px;
+}
+
+/*--------------------------------Line edit--------------------------------*/
+
+QLineEdit{
+	background-color:#37474F ;
+
+	border-style: solid;
+	border-width: 2px;
+	border-color: #455A64;
+	border-radius: 10px;
+
+	color:#ECEFF1;
+	font-family: &quot;Calibri&quot;;
+	font-size: 17px;
+
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+QLineEdit:hover{
+	background-color: #263238;
+}
+
+QLineEdit:focus{
+	background-color: #1c2428;
+}
+
+/*--------------------------------Line edit--------------------------------*/
+
+QCheckBox{
+	color:#78909C;
+	font-family: &quot;Calibri&quot;;
+	font-size: 15px;
+	background-color: none;
+
+}
+
+</string>
+       </property>
+       <widget class="QPushButton" name="ExitButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>310</y>
+          <width>100</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="LogButton">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>250</y>
+          <width>100</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="RegButton">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>280</y>
+          <width>100</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri Bold</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Register</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="PassLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>180</y>
+          <width>200</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="maxLength">
+         <number>50</number>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="LoginLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>140</y>
+          <width>200</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="statusTip">
+         <string extracomment="ewrwer"/>
+        </property>
+        <property name="whatsThis">
+         <string/>
+        </property>
+        <property name="accessibleName">
+         <string/>
+        </property>
+        <property name="accessibleDescription">
+         <string/>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>50</number>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="dragEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string>Login</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="RemMeCheckBox">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>220</y>
+          <width>110</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Remember me</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="RegMenu">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/*--------------------------------Backdround color--------------------------------*/
+#RegMenu{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(23, 30, 34, 255), stop:0.5 rgba(30, 40, 45, 255), stop:1 rgba(23, 30, 34, 255))
+}
+/*--------------------------------Button--------------------------------*/
+
+QPushButton{
+	
+	background-color: rgba(242, 150, 47, 220);
+	
+
+	border-radius:10px;
+
+	color:#1b2327;
+	font-family:  &quot;Calibri Bold&quot;;
+	font-size: 17px;
+
+}
+
+QPushButton:hover:!pressed{
+	background-color: #455A64;
+color:#EEEEEE;
+
+}
+
+QPushButton:hover:pressed{
+	background-color: #37474F;
+color:#DDDDDD;
+}
+QPushButton#RegGoBackButton{
+
+	border-radius:18px;
+}
+/*--------------------------------Check box--------------------------------*/
+QCheckBox {
+	color:#999999;
+	font: italic 9pt &quot;Open Sans Light&quot;;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:checked {
+    background: #198C49;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:unchecked {
+    background:#990329;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:checked:hover {
+  	border: 2px solid #198C49;
+    background: #15733C;
+	border-radius:6px;
+}
+
+QCheckBox::indicator:unchecked:hover {
+	border: 2px solid #990329;
+	background:#800322;
+	border-radius:6px;
+}
+
+/*--------------------------------Line edit--------------------------------*/
+
+QLineEdit{
+	background-color:#37474F ;
+
+	border-style: solid;
+	border-width: 2px;
+	border-color: #455A64;
+	border-radius: 10px;
+
+	color:#ECEFF1;
+	font-family: &quot;Calibri&quot;;
+	font-size: 17px;
+
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+QLineEdit:hover{
+	background-color: #263238;
+}
+
+QLineEdit:focus{
+	background-color: #1c2428;
+}
+
+
+</string>
+       </property>
+       <widget class="QLineEdit" name="RegLogLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>433</x>
+          <y>302</y>
+          <width>200</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="maxLength">
+         <number>50</number>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Login</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="RegPassLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>433</x>
+          <y>356</y>
+          <width>200</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="maxLength">
+         <number>50</number>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="RegConfLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>433</x>
+          <y>410</y>
+          <width>200</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="maxLength">
+         <number>50</number>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Confirm password</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="RegRegButton">
+        <property name="geometry">
+         <rect>
+          <x>433</x>
+          <y>464</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Register</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="RegGoBackButton">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>←</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>LoginLineEdit</tabstop>
+  <tabstop>PassLineEdit</tabstop>
+  <tabstop>RemMeCheckBox</tabstop>
+  <tabstop>LogButton</tabstop>
+  <tabstop>RegButton</tabstop>
+  <tabstop>ExitButton</tabstop>
+  <tabstop>RegLogLineEdit</tabstop>
+  <tabstop>RegPassLineEdit</tabstop>
+  <tabstop>RegConfLineEdit</tabstop>
+  <tabstop>RegRegButton</tabstop>
+  <tabstop>RegGoBackButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="recources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

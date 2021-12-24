@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/recources">
+        <file>img/BookedTicketsIcon.png</file>
+        <file>img/ExitIcon.png</file>
+        <file>img/TrainIcon.png</file>
+        <file>img/BookedTicketsIconFocus.png</file>
+        <file>img/BookedTicketsIconHover.png</file>
+        <file>img/ExitIconFocus.png</file>
+        <file>img/ExitIconHover.png</file>
+        <file>img/TrainIconFocus.png</file>
+        <file>img/TrainIconHover.png</file>
+        <file>img/loadingGif.gif</file>
+        <file>img/programicon.png</file>
+        <file>img/downArrow.png</file>
+        <file>img/upArrow.png</file>
+        <file>img/freeSeat.png</file>
+        <file>img/takenSeat.png</file>
+        <file>img/selectedSeat.png</file>
+        <file>img/wagonIcon.png</file>
+    </qresource>
+    <qresource prefix="/files"/>
+</RCC>
