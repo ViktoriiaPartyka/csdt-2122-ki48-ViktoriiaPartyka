@@ -29,7 +29,7 @@ QString BackEnd::getCurUserame()
 void BackEnd::showErrorMsg(QWidget* widget, QString errMsg)
 {
     QWhatsThis::showText(widget->mapToGlobal(QPoint(widget->width() / 2, widget->height())),
-                                             "<html><font style =\"font: 12px;\">" + errMsg + "</font></html>");
+        "<html><font style =\"font: 12px;\">" + errMsg + "</font></html>");
 }
 
 void BackEnd::createSocket()
@@ -117,7 +117,7 @@ void BackEnd::sockReady()
     }
 }
 
-void BackEnd::decAndExec()
+int BackEnd::decAndExec()
 {
     if (obj->value("operation").toString() == "login")
     {
@@ -159,7 +159,9 @@ void BackEnd::decAndExec()
     {
         // to do: show bad respond msg
         emit _errSignalMW(obj->value("err").toString());
+        return 1;
     }
+    return 0;
 }
 
 void BackEnd::sockDisc()
@@ -252,8 +254,8 @@ void BackEnd::getUserTickets()
     if (obj->value("resp").toString() == "ok")
     {
         emit _userTickets(obj->value("unActiveTickets").toVariant().toJsonArray().toVariantList(),
-                                            obj->value("boughtTickets").toVariant().toJsonArray().toVariantList(),
-                                            obj->value("reservedTickets").toVariant().toJsonArray().toVariantList());
+            obj->value("boughtTickets").toVariant().toJsonArray().toVariantList(),
+            obj->value("reservedTickets").toVariant().toJsonArray().toVariantList());
     }
 
     else
