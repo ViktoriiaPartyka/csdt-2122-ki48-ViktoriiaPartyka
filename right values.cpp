@@ -1,21 +1,19 @@
 
 // Unit test, right values
 #include "stdafx.h"
-using namespace System;
+#include "backend.h"
 
-// function that finds the maximum value between three integers
-int Max(int a, int b, int c)
 
-// a - Cola, b - Root bear , c- lemon lime 
+void TestFunction()
 {
-    int max = a;
-    if (max < b) max = b;
-    if (max < c) max = c;
-    return max;
-}
-
-int main(array<System::String^> ^ args)
-{
-    Console::WriteLine(L"Unit-test in MS Visual Studio.");
-    return 0;
+    int status = decAndExec();
+    //when status isn't zero error occured
+    if (status != 0)
+    {
+        printf("Test failed when testing decAndExec ");
+        return;
+    }
+    // if no error was found
+    printf("Test passed when testing decAndExec ");
+    return;
 }
